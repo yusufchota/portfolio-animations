@@ -1,0 +1,199 @@
+:root {
+    --bg: #000000;    
+    --card: #0d0d0d;        
+    --accent: #ff9500;        
+    --accent-glow: #ffb347;   
+    --muted: #d1d5db;         
+    --white: #ffffff;
+}
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Animated Background Particles */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 20s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(100px, -100px) scale(1.2); }
+  66% { transform: translate(-100px, 100px) scale(0.8); }
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    padding: 30px 0 30px 0px;
+}
+
+.section-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    padding: 40px 0 80px;
+}
+
+/* Central Timeline Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-glow) 100%);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+/* Center Dot */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 4px solid var(--bg);
+    box-shadow: 0 0 20px var(--accent);
+    z-index: 10;
+}
+
+/* Cards */
+.timeline-card {
+    background: var(--card);
+    border: 2px solid rgb(211, 134, 17);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.timeline-card h3{
+    color: var(--accent);
+}
+.timeline-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 50px rgba(255, 149, 0, 0.6);
+    transform: translateY(-5px);
+}
+
+/* Left Side Cards */
+.timeline-left {
+    padding-right: 60px;
+}
+
+.timeline-left .timeline-card {
+    margin-left: 0;
+}
+
+/* Right Side Cards */
+.timeline-right {
+    padding-left: 60px;
+}
+
+.timeline-right .timeline-card {
+    margin-right: 0;
+}
+
+/* Card Content */
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.card-content {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+.card{
+    margin: 20px 0px;
+    border: none;
+    background: transparent;
+}
+/* BUTTONS */
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-glow));
+  border: none;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+.btn-accent:hover {
+  background: linear-gradient(90deg, var(--accent-glow), var(--accent));
+  box-shadow: 0 0 15px rgba(255, 149, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        padding-left: 70px !important;
+        padding-right: 0 !important;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .section-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1rem;
+    }
+    .timeline-item{
+        margin-right: 20px;
+    }
+    .card-content {
+        font-size: 0.8rem;
+    }
+}

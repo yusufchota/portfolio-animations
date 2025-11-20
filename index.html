@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammed Yusuf — Portfolio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for skill logos / icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Animated Background Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Mohammed Yusuf</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" style="color:var(--muted)"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4 p-2">
+        <div class="col-lg-6 order-2 order-lg-1 reveal">
+          <p class="mb-2 lead-muted parallax-text">Hello, I'm</p>
+          <h1 class="display-name parallax-text">Mohammed Yusuf . A</h1>
+          <p class="intro lead-muted mt-3 parallax-text">Front-end developer focused on building responsive, accessible interfaces with HTML, CSS,  Bootstrap, Tailwind Css, JavaScript and React. I enjoy turning ideas into clean, interactive web experiences.</p>
+
+          <div class="mt-4 d-flex gap-4">
+            <a class="btn btn-accent btn-lg" href="#projects">See projects</a>
+            <a href="./resume/Mohammed Yusuf Resume.pdf"  target="_blank" class="btn btn-resume">
+              <i class="fa-solid fa-download" style="margin-right: 4px;"></i>Resume
+            </a>
+          </div>
+
+          <ul class="list-inline mt-4 mb-0">
+            <li class="list-inline-item me-4 lead-muted"><a href="#html-css-js" class="small-tag"><i class="fa fa-code me-2" ></i>HTML • CSS • JS</a></li>
+            <li class="list-inline-item me-4 lead-muted">
+              <a href="#html-css-js" class="small-tag"><i class="fa fa-rocket me-2"></i>Bootstrap • React</a></li>
+            <li class="list-inline-item lead-muted"><a href="#html-css-js" class="small-tag"><i class="fa fa-object-group me-2"></i>UI/UX</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6 text-center order-1 order-lg-2 reveal">
+          <img src="./images/full-stack-development.gif" alt="Yusuf-photo" class="avatar">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col reveal">
+        <div class="card card-ghost p-4">
+          <h2 class="mb-3" style="color:var(--accent-glow)">About Me - Who Am I?</h2>
+          <p class="lead-muted fadeIn">I’m a front-end developer focused on building clean, responsive, and accessible web interfaces using HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, and React. I enjoy turning ideas into smooth, interactive user experiences with attention to detail and modern UI trends. I learn fast, love experimenting with new designs, and often challenge myself to rebuild real-world websites just to improve my skills. Creating polished, intuitive digital experiences is what excites me the most.</p>
+          <ul class="mt-3 fadeIn">
+            <li class="lead-muted">🎯 Problem solver who loves clean code</li>
+            <li class="lead-muted">⚡ Passionate about responsive design & accessibility</li>
+            <li class="lead-muted">📚 Always learning — currently focused on React and UI patterns</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 reveal">
+        <div class="card card-ghost p-4">
+          <h3 class="mb-3" style="color:var(--accent-glow);letter-spacing:1px;font-weight:600;">Quick facts</h3>
+
+          <div class="row quick-facts">
+
+            <div class="col-12 col-md-6 mb-3">
+              <strong style="color:var(--accent-glow)">📍Location</strong>
+              <p class="lead-muted mb-0">Chennai, India</p>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <strong style="color:var(--accent-glow)">🎓Education</strong>
+              <p class="lead-muted mb-0">UG - BSc Computer Science (2024)</p>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <strong style="color:var(--accent-glow)">🛠️ Skills</strong>
+              <p class="lead-muted mb-0">HTML, CSS, Tailwind, JavaScript, React</p>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <strong style="color:var(--accent-glow)">🌐Languages</strong>
+              <p class="lead-muted mb-0">English, Tamil, Hindi</p>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <strong style="color:var(--accent-glow)">⌛Availability</strong>
+              <p class="lead-muted mb-0">Open to front-end roles</p>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <strong style="color:var(--accent-glow)">💼Experience</strong>
+              <p class="lead-muted mb-0">Personal & learning projects</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-5 bg-transparent">
+    <div class="container" id="html-css-js">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Skills</h2>
+        <p class="lead-muted mb-0">A few technologies I work with</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- HTML -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-html5" style="color:#e34f26;"></i>
+            </div>
+            <h5 class="mb-1">HTML</h5>
+            <p class="small lead-muted">Clean structure & accessible markup</p>
+          </div></a>
+        </div>
+
+        <!-- CSS -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-css3-alt" style="color:#2965f1"></i>
+            </div>
+            <h5 class="mb-1">CSS</h5>
+            <p class="small lead-muted">Modern layouts, animations & styling</p>
+          </div></a>
+        </div>
+        <!-- JavaScript -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-js-square" style="color:#f0db4f"></i>
+            </div>
+            <h5 class="mb-1">JavaScript</h5>
+            <p class="small lead-muted">Dynamic UI, logic building & ES6+</p>
+          </div></a>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-bootstrap" style="color:#9522dd"></i>
+            </div>
+            <h5 class="mb-1">Bootstrap</h5>
+            <p class="small lead-muted">Responsive grid & ready-made components</p>
+          </div></a>
+        </div>
+
+        <!-- Tailwind Css -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-tag" style="color:#7b8cff"></i>
+            </div>
+            <h5 class="mb-1">Tailwind Css</h5>
+            <p class="small lead-muted">Utility-first styling & fast UI building</p>
+          </div></a>
+        </div>
+        <!-- React -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-react" style="color:#28abcf"></i>
+            </div>
+            <h5 class="mb-1">React</h5>
+            <p class="small lead-muted">Reusable components & state management</p>
+          </div></a>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-solid fa-palette" style="color:#f472b6"></i>
+            </div>
+            <h5 class="mb-1">UI / UX</h5>
+            <p class="small lead-muted">Wireframes, visual hierarchy & flow design</p>
+          </div></a>
+        </div>
+        <!-- Figma -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-figma" style="color:#f24e1e"></i>
+            </div>
+            <h5 class="mb-1">Figma</h5>
+            <p class="small lead-muted">Interface design & interactive prototypes</p>
+          </div>
+        </div>
+
+        <!-- Wordpress -->
+        <div class="col-sm-12 col-md-6 col-lg-4 reveal">
+          <a href="./project-card.html">
+          <div class="card skill-card p-3 card-ghost h-100 text-center">
+            <div class="fs-1 mb-3">
+              <i class="fa-brands fa-wordpress" style="color:#61dafb"></i>
+            </div>
+            <h5 class="mb-1">WordPress</h5>
+            <p class="small lead-muted">Themes, customization & content management</p>
+          </div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Projects</h2>
+        <p class="lead-muted mb-0">A Collection of my work</p>
+      </div>
+
+      <!-- Project 1 -->
+      <div class="project-row card-ghost p-3 mb-3 reveal">
+        <div class="row g-3 align-items-center project-card">
+          <div class="col-md-5">
+            <img src="./Project-img/youtube-clone.png" alt="project 1" class="project-img w-100">
+          </div>
+          <div class="col-md-7 project-card-des">
+            <h4>Youtube Web Application - Clone</h4>
+            <p class="lead-muted p-3">
+              I developed a YouTube‐clone interface project using HTML, CSS and Bootstrap to practice responsive front‐end development. The interface includes a navigation sidebar, search bar with voice-icon placeholder, and a dynamically styled grid of video cards. I built it to demonstrate mastery of responsive layouts and UI structure, and I plan to enhance it by adding JavaScript for dynamic interactivity.
+            </p>
+            <div class="mt-3">
+              <a class="btn btn-accent" href="https://github.com/yusufchota/YouTube-Clone.git" target="_blank">Code</a>
+              <a class="btn btn-outline-light me-2" href="https://yusufchota.github.io/YouTube-Clone/">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-row card-ghost p-3 mb-3 reveal">
+        <div class="row g-3 align-items-center flex-md-row-reverse">
+          <div class="col-md-5">
+            <img src="./Project-img/Vibe-Stream.png" alt="project 2" class="project-img w-100">
+          </div>
+          <div class="col-md-7 project-card-des">
+            <h4>Vibe Stream - Music Player</h4>
+            <p class="lead-muted p-3">This project is a team-collaboration web application built as part of a front-end development initiative. It features a clean layout with a navigation header, main content sections, and responsive design across device sizes. I contributed to building the page structure, styling with CSS (and optionally Bootstrap), and ensuring the design adapts smoothly to both mobile and desktop.</p>
+            <div class="mt-3">
+              <a class="btn btn-accent" href="https://github.com/yusufchota/Team-Project-1.git">Code</a>
+              <a class="btn btn-outline-light me-2" href="https://yusufchota.github.io/Team-Project-1/">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-row card-ghost p-3 mb-3 reveal">
+        <div class="row g-3 align-items-center">
+          <div class="col-md-5">
+            <img src="./Project-img/Rock-Paper-Scissors.png" alt="project 3" class="project-img w-100">
+          </div>
+          <div class="col-md-7 project-card-des">
+            <h4>Rock • Paper • Scissors</h4>
+            <p class="lead-muted p-3">This is a simple interactive web game built using HTML, CSS and JavaScript. The core functionality allows a user to play the classic Rock-Paper-Scissors game against the computer in real-time. The UI presents buttons for each choice (rock, paper, scissors), displays the computer’s random choice, and shows the result (win, lose or draw) with visual feedback.</p>
+            <div class="mt-3">
+              <a class="btn btn-accent" href="https://github.com/yusufchota/Rock-paper-scissors-game.git" target="_blank">Code</a>
+              <a class="btn btn-outline-light me-2" href="https://yusufchota.github.io/Rock-paper-scissors-game/">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-row card-ghost p-3 mb-3 reveal">
+        <div class="row g-3 align-items-center flex-md-row-reverse">
+          <div class="col-md-5">
+            <img src="./Project-img/portfolio.png" alt="project 4" class="project-img w-100">
+          </div>
+          <div class="col-md-7 project-card-des">
+            <h4>My Portfolio</h4>
+            <p class="lead-muted p-3">This is my personal portfolio website designed to showcase my skills, projects, and experience as a front-end developer. The design follows a dark theme with orange highlights, giving it a modern and professional look. The website includes well-structured sections such as Home, About, Skills, Projects, and Contact. It is built with a fully responsive layout, ensuring a smooth browsing experience on mobile, tablet, and desktop devices.</p>
+            <div class="mt-3">
+              <a class="btn btn-accent" href="https://github.com/yusufchota/portfolio-website.git">Code</a>
+              <a class="btn btn-outline-light me-2" href="https://yusufchota.github.io/portfolio-website/">Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-accent mt-4" href="./project-card.html" target="_blank">More Projects</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="contact-title mb-3">Contact</h2>
+      <p class="contact-subtitle mb-4">
+        Want to work together or have a question? Drop a message — I’ll reply within 24 hours.
+      </p>
+
+      <div class="row g-4">
+        <!-- LEFT SIDE INFO -->
+        <div class="col-md-5">
+          <ul class="list-unstyled contact-info">
+            <li><strong>Email :</strong> <a href="mailto:yusufchota7@gmail.com">yusufchota7@gmail.com</a></li>
+            <li><strong>Phone :</strong> +91 7338992687</li>
+            <li><strong>Location :</strong> Chennai, India</li>
+            <li><strong>Availability :</strong> Open for Front-End Developer roles</li>
+          </ul>
+
+          <div class="mt-4">
+            <a href="https://www.linkedin.com/in/yusufchota/" target="_blank" class="btn btn-contact me-2">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/yusufchota" target="_blank" class="btn btn-contact-outline">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+        <div class="col-md-7 reveal">
+          <div class="contact-card p-4">
+            <form id="contactForm">
+              <div class="mb-3">
+                <input type="text" class="form-control contact-input" placeholder="Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control contact-input" placeholder="Email" required>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control contact-input" rows="5" placeholder="Message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-send w-100">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div>© <span id="year"></span> Mohammed Yusuf— All rights reserved.</div>
+        <div class="lead-muted">Built with HTML • CSS • Bootstrap • ❤️</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Fill year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Create animated background particles
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 15; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.width = Math.random() * 100 + 50 + 'px';
+      particle.style.height = particle.style.width;
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 20 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+      particlesContainer.appendChild(particle);
+    }
+
+    // Parallax effect for hero text
+    document.addEventListener('mousemove', (e) => {
+      const parallaxElements = document.querySelectorAll('.parallax-text');
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      
+      parallaxElements.forEach((el, index) => {
+        const speed = (index + 1) * 0.5;
+        el.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+      });
+    });
+
+    // Smooth reveal on scroll using IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    let lastScroll = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // Highlight active nav link on scroll
+      let fromTop = window.scrollY + 190;
+      document.querySelectorAll('.nav-link').forEach(link => {
+        let section = document.querySelector(link.getAttribute('href'));
+        if (section && section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop) {
+          document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+
+      lastScroll = currentScroll;
+    });
+
+    // Cursor trail effect (optional - subtle effect)
+    let cursorTrail = [];
+    document.addEventListener('mousemove', (e) => {
+      if (window.innerWidth > 768) { // Only on desktop
+        const trail = document.createElement('div');
+        trail.className = 'cursor-trail';
+        trail.style.cssText = `
+          position: fixed;
+          width: 5px;
+          height: 5px;
+          background: var(--accent);
+          border-radius: 50%;
+          pointer-events: none;
+          left: ${e.clientX}px;
+          top: ${e.clientY}px;
+          opacity: 0.5;
+          z-index: 9999;
+          transition: opacity 0.5s;
+        `;
+        document.body.appendChild(trail);
+        
+        setTimeout(() => {
+          trail.style.opacity = '0';
+          setTimeout(() => trail.remove(), 500);
+        }, 100);
+      }
+    });
+
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Create success message
+      const btn = this.querySelector('.btn-send');
+      const originalText = btn.textContent;
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#10b981';
+      setTimeout(()=>{
+        alert('Message send Successfully')
+      },500)
+      
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        this.reset();
+      }, 2000);
+    });
+
+
+  </script>
+</body>
+</html>

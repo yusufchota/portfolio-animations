@@ -1,0 +1,400 @@
+:root {
+  --bg: #000000;    
+  --card: #0d0d0d;        
+  --accent: #ff9500;        
+  --accent-glow: #ffb347;   
+  --muted: #d1d5db;         
+  --white: #ffffff;
+  --text: #e8e8e8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #111111 100%);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Animated Background Particles */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 20s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(100px, -100px) scale(1.2); }
+  66% { transform: translate(-100px, 100px) scale(0.8); }
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  /* border-bottom: 1px solid var(--border); */
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--accent) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  color: var(--muted) !important;
+  font-weight: 500;
+  position: relative;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: ''; 
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+/* HERO */
+.hero { padding: 6rem 0;margin-top: 30px; }
+.hero .intro { max-width: 55ch;line-height: 40px;letter-spacing: 2px;word-spacing: 10px; }
+
+.display-name {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(150deg, var(--accent), var(--accent-glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 16px 0;
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.lead-muted {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.intro {
+  animation: slideInLeft 1s ease-out 0.2s backwards;
+}
+
+.small-tag{text-decoration: none; color: var(--white);&:hover{color: var(--accent-glow);}} 
+.lead-muted { color: var(--muted);} 
+.avatar {
+  min-width: 300px;
+  height: 300px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 15px rgba(255, 149, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(255, 149, 0, 0.6);
+}
+/* Resume Button */
+.btn-resume {
+  background: var(--bg);
+  color: var(--white);
+  font-weight: 600;
+  padding: 8px 26px;
+  border-radius: 8px;
+  border: 1px solid var(--white);
+  letter-spacing: 1px;
+}
+
+.btn-resume:hover {
+  background: var(--accent);
+}
+/* About */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fade 0.8s ease forwards;
+  line-height: 1.8; 
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  font-size: 17px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  max-width: 900px;
+  margin: auto;
+}
+.quick-facts{
+  margin: auto; 
+  max-width: 1050px;
+  padding: 10px; 
+  line-height: 20px; 
+  letter-spacing: 1px;
+}
+.quick-facts div{
+  padding: 10px;
+}
+.quick-facts div p{
+  margin-left: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+/* CARDS */
+.card-ghost {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(255, 149, 0, 0.05);
+  padding: 30px;
+}
+
+/* SKILL CARDS */
+.skill-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.skill-card:hover {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+  transform: scale(1.03);
+  transition: .3s ease;
+  border-color: var(--accent);
+  cursor: pointer;
+}
+.skill-card h5{
+  color: var(--accent-glow);
+}
+ .skill-card i {
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover i {
+  transform: rotateY(360deg);
+}
+
+.row .reveal a{
+  text-decoration: none;
+}
+/* PROJECTS */
+.project-row { padding: 2rem 0; border-radius: 12px;}
+.project-img {
+  min-height: 180px;
+  max-height: 320px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
+}
+.project-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 149, 0, 0.3);
+}
+.project-card-des p{
+  letter-spacing: 1px;
+  max-width: 520px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.project-card-des h4{
+  color: var(--accent-glow);
+  text-shadow: 0 0 6px rgba(255, 217, 90, 0.4);
+  letter-spacing: 1px;
+}
+/* CONTACT */
+.form-control {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--white);
+}
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 .15rem rgba(255, 149, 0, 0.4);
+}
+
+/* BUTTONS */
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-glow));
+  border: none;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+.btn-accent:hover {
+  background: linear-gradient(90deg, var(--accent-glow), var(--accent));
+  box-shadow: 0 0 15px rgba(255, 149, 0, 0.6);
+}
+
+.btn-outline-light:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+/* FOOTER */
+footer {
+  padding: 1.5rem 0;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(150px) scale(1.05);
+  transition: all .65s cubic-bezier(.2, .9, .2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .avatar { width: 180px; height: 180px; }
+  .hero { padding: 3.5rem 0; }
+}
+
+/* Heading */
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.contact-subtitle {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Contact Info List */
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* Social Buttons */
+.btn-contact {
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.btn-contact:hover {
+  background: var(--accent-glow);
+}
+
+.btn-contact-outline {
+  border: 1px solid var(--muted);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.btn-contact-outline:hover {
+  background: var(--muted);
+  color: var(--bg);
+}
+
+/* Contact Form Card */
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+/* Input Styling */
+.contact-input {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  &::placeholder{
+    color: var(--accent-glow);
+  }
+}
+
+.contact-input:focus {
+  border-color: #ff9100;
+  box-shadow: 0 0 6px rgba(255, 145, 0, 0.5);
+  color: var(--bg);
+}
+
+/* Send button */
+.btn-send {
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.btn-send:hover {
+  background: var(--accent-glow);
+}
