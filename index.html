@@ -44,8 +44,8 @@
       <div class="row align-items-center g-4 p-2">
         <div class="col-lg-6 order-2 order-lg-1 reveal">
           <p class="mb-2 lead-muted parallax-text">Hello, I'm</p>
-          <h1 class="display-name parallax-text">Mohammed Yusuf . A</h1>
-          <p>I'm a <span class="typed parallax-text" data-typed-items="Web Developer, UI/UX Designer, Freelancer"></span></p>
+          <h1 id="text" class="display-5 fw-bold parallax-text display-name"></h1>
+          <p class="parallax-text">I'm a <span class="typed" data-typed-items="Web Developer, UI/UX Designer, Freelancer"></span></p>
           <p class="intro lead-muted mt-3 parallax-text">Front-end developer focused on building responsive, accessible interfaces with HTML, CSS,  Bootstrap, Tailwind Css, JavaScript and React. I enjoy turning ideas into clean, interactive web experiences.</p>
 
           <div class="mt-4 d-flex gap-4">
@@ -327,7 +327,7 @@
 
   <!-- CONTACT -->
   <section id="contact" class="py-5">
-    <div class="container">
+    <div class="container contact-div">
       <h2 class="contact-title mb-3">Contact</h2>
       <p class="contact-subtitle mb-4">
         Want to work together or have a question? Drop a message — I’ll reply within 24 hours.
@@ -343,7 +343,7 @@
             <li><strong>Availability :</strong> Open for Front-End Developer roles</li>
           </ul>
 
-          <div class="mt-4">
+          <div class="mt-4 contact-info">
             <a href="https://www.linkedin.com/in/yusufchota/" target="_blank" class="btn btn-contact me-2">
               <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
@@ -358,13 +358,13 @@
           <div class="contact-card p-4">
             <form id="contactForm">
               <div class="mb-3">
-                <input type="text" class="form-control contact-input" placeholder="Name" required>
+                <input type="text" class="form-control contact-input" id="name" placeholder="Name" required>
               </div>
               <div class="mb-3">
-                <input type="email" class="form-control contact-input" placeholder="Email" required>
+                <input type="email" class="form-control contact-input" id="email" placeholder="Email" required>
               </div>
               <div class="mb-3">
-                <textarea class="form-control contact-input" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control contact-input" id="message" rows="5" placeholder="Message" required></textarea>
               </div>
 
               <button type="submit" class="btn btn-send w-100">Send Message</button>
@@ -493,12 +493,19 @@
       }
     });
 
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Create success message
+    // Contact To Mail
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault(); 
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const mailtoLink = `mailto:yusufchota7@gmail.com?body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+
+      window.location.href = mailtoLink;
+
       const btn = this.querySelector('.btn-send');
       const originalText = btn.textContent;
       btn.textContent = '✓ Message Sent!';
@@ -514,7 +521,18 @@
       }, 2000);
     });
 
+    // name animations
 
+    const text = "Mohammed Yusuf";
+    let i = 0;
+    function type() {
+      document.getElementById("text").textContent += text.charAt(i);
+      i++;
+      if (i < text.length) {
+          setTimeout(type, 100); // typing speed
+      }
+    }
+    window.onload = type;
   </script>
 </body>
 </html>
