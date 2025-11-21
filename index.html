@@ -45,6 +45,7 @@
         <div class="col-lg-6 order-2 order-lg-1 reveal">
           <p class="mb-2 lead-muted parallax-text">Hello, I'm</p>
           <h1 class="display-name parallax-text">Mohammed Yusuf . A</h1>
+          <p>I'm a <span class="typed parallax-text" data-typed-items="Web Developer, UI/UX Designer, Freelancer"></span></p>
           <p class="intro lead-muted mt-3 parallax-text">Front-end developer focused on building responsive, accessible interfaces with HTML, CSS,  Bootstrap, Tailwind Css, JavaScript and React. I enjoy turning ideas into clean, interactive web experiences.</p>
 
           <div class="mt-4 d-flex gap-4">
@@ -387,10 +388,21 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <script>
     // Fill year
     document.getElementById('year').textContent = new Date().getFullYear();
+    // name change components
+    document.addEventListener("DOMContentLoaded", function () {
+      const typed = new Typed(".typed", {
+        strings: document.querySelector(".typed").getAttribute("data-typed-items").split(","),
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1500,
+        loop: true
+      });
+    });
     // Create animated background particles
     const particlesContainer = document.getElementById('particles');
     for (let i = 0; i < 15; i++) {
@@ -410,7 +422,6 @@
       const parallaxElements = document.querySelectorAll('.parallax-text');
       const x = (e.clientX / window.innerWidth - 0.5) * 20;
       const y = (e.clientY / window.innerHeight - 0.5) * 20;
-      
       parallaxElements.forEach((el, index) => {
         const speed = (index + 1) * 0.5;
         el.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
