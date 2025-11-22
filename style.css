@@ -340,6 +340,7 @@ footer {
 @media (max-width: 767px) {
   .avatar { width: 180px; height: 180px; }
   .hero { padding: 3.5rem 0; }
+  .built-tool{display: none;}
 }
 
 /* contact */
